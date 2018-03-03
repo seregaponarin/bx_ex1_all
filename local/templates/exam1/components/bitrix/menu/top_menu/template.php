@@ -17,13 +17,18 @@
 
                             <?if ($arItem["PERMISSION"] > "D"):?>
                                 <?if ($arItem["IS_PARENT"]):?>
-                                    <li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a><ul>
+                                    <li>
+                                        <a href="<?=$arItem["LINK"]?>" class="<?=($arItem["PARAMS"]["COLOR_CLASS"] ? $arItem["PARAMS"]["COLOR_CLASS"] : "")?>">
+                                            <?=$arItem["TEXT"]?>
+                                        </a><ul>
                                     <?if($arItem["PARAMS"]["MENU_TEXT"]):?>
                                         <div class="menu-text"><?=$arItem["PARAMS"]["MENU_TEXT"]?></div>
                                     <?endif;?>
                                 <?else:?>
                                     <li class="<?=($arItem["PARAMS"]["CLASS"] ? $arItem["PARAMS"]["CLASS"] : "")?>">
-                                        <a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+                                        <a href="<?=$arItem["LINK"]?>" class="<?=($arItem["PARAMS"]["COLOR_CLASS"] ? $arItem["PARAMS"]["COLOR_CLASS"] : "")?>">
+                                            <?=$arItem["TEXT"]?>
+                                        </a>
                                     </li>
                                 <?endif;?>
                             <?endif;?>
